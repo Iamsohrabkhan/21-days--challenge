@@ -1,0 +1,21 @@
+@font-face {
+  font-family: oldschoolGrotesk;
+  src: url("/OldschoolGrotesk_Trial/VariableFont/OldschoolGroteskVarTrial.ttf")
+    format("truetype");
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  * {
+    @apply font-oldschoolGrotesk;
+  }
+}
+
+:root {
+  --leave: #d0ff71;
+}
+::selection {
+  background-color: var(--leave);
+}
