@@ -6,6 +6,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body {
+  -webkit-text-size-adjust: 100%; /* or 'none' if you want to disable it */
+}
 
 @layer components {
   * {
@@ -13,9 +16,11 @@
   }
 }
 
+
 :root {
   --leave: #d0ff71;
 }
 ::selection {
   background-color: var(--leave);
 }
+

@@ -11,6 +11,7 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { Button } from "./button";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -25,7 +26,11 @@ const Navbar = () => {
     }
     if (latest > 99) {
       animate(scope.current, { maxWidth: "80%" });
-      scope.current.classList.add("backdrop-blur-3xl","rounded-3xl","bg-white/90");
+      scope.current.classList.add(
+        "backdrop-blur-3xl",
+        "rounded-3xl",
+        "bg-white/90"
+      );
     } else {
       animate(scope.current, { maxWidth: "100%" });
     }
@@ -124,13 +129,17 @@ const Navbar = () => {
     >
       <nav className="flex mx-auto max-w-full items-center justify-between">
         <div className="logo">
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
         </div>
         <div>
           <ul className="hidden md:flex gap-6 [&>li]:cursor-pointer">
             <Li>Services</Li>
             <Li>Work</Li>
-            <Li>About</Li>
+            <Li>
+              <Link to={"about"}>About</Link>
+            </Li>
             <Li>Blog</Li>
             <Li>Contact</Li>
           </ul>
@@ -147,7 +156,9 @@ const Navbar = () => {
             <li className="list-disc "> Have a look around...</li>
             <li className="mob-nav text-5xl">Services</li>
             <li className="mob-nav text-5xl">Work</li>
-            <li className="mob-nav text-5xl">About</li>
+            <li className="mob-nav text-5xl">
+              <Link to={"about"}>About</Link>
+            </li>
             <li className="mob-nav text-5xl">Blog</li>
             <li className="mob-nav text-5xl">Contact</li>
             <Button className="mt-2" variant="primary">

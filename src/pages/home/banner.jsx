@@ -28,7 +28,9 @@ const Banner = () => {
           <OutlineButton>Meet the team</OutlineButton>
         </div>
       </div>
-      <div className="video w-full h-full absolute inset-0 mask mt-24">
+      <div className="video w-full h-full absolute inset-0 mask mt-24"
+      // style={{clipPath:"polygon(50% 0%, 100% 0, 100% 71%, 73% 71%, 73% 89%, 48% 89%, 48% 100%, 0 100%, 0 28%, 0 0)"}}
+      >
         <video
           autoPlay
           muted
@@ -53,7 +55,7 @@ const Banner = () => {
         >
           <motion.div className="img" layout>
             <img
-              className="size-14 rounded-full"
+              className="size-14 rounded-full "
               src="https://made-byshape.transforms.svdcdn.com/production/uploads/images/India-2022/Individuals-Black-Wall/Shape-April-2022-HR-186.jpg?w=200&h=200&q=80&fm=webp&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1651143173&s=be043bcd94bb13283574b35d1df6ee93"
               alt=""
             />
